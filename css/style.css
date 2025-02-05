@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo 2", serif;
+  }
+  :root{
+    --maincolor: #000;
+    --subcolor: greenyellow;
+    --garycolor: #787A91;
+    --lightcolor: #EEEEEE;
+  }
+  body{
+    background-color: var(--maincolor) !important;
+  }
+  .funkyfont{
+  font-family: "Freckle Face", serif;
+}
+/* navbar */
+.navbars{
+    top: 0;
+    width: 100vw;
+    background-color:var(--lightcolor);
+    height: 0;
+    position: fixed;
+    z-index: 99;
+}
+@keyframes navbaranimation {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100vh;
+    }
+}
+.playanimation{
+    animation: navbaranimation 1 1s forwards ;
+}
+@keyframes removeAnimation{
+    0%{
+     height:100vh;
+    }
+    100%{
+        height: 0;
+    }
+}
+.removeanmation{
+    animation: removeAnimation 1 1s forwards ;
+}
+button{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+}
+ul{
+  font-family: "Freckle Face", serif;
+    list-style: none;
+    font-size: 50px;
+    position: absolute;
+    top: -700px;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+}
+li{
+    color: var(--maincolor);
+    font-family: "Freckle Face", serif;
+}
+@keyframes showcontent {
+    0%{
+        top: -500px;
+    }
+    100%{
+        top: 0;
+    }
+}
+.showcontent{
+    animation: showcontent 0.5s 1 linear forwards;
+    animation-delay: 0.5s;
+}
+@keyframes removecontent {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -700px;
+    }
+}
+.removecontent{
+    animation: removecontent 0.1s 1 linear forwards;
+}
+/* end of navbar */
+/* From Uiverse.io by prakashdc */ 
+.hamburger {
+    cursor: pointer;
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    z-index: 100;
+}
+
+.hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+      /* The size of the SVG defines the overall size */
+      height: 3em;
+      /* Define the transition for transforming the SVG */
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .line {
+        fill: none;
+        stroke: greenyellow;
+        stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  /* social media end of navbar */
+  /* From Uiverse.io by vinodjangid07 */ 
+.card {
+    bottom: 0 !important;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    border-radius: 50%;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .logoimg{
+    position: fixed;
+    width: 150px;
+    object-fit: contain;
+    top: 5px;
+    z-index: 999999999999;
+  }
+  @media (max-width:576px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+.intro{
+    font-family: "Baloo 2", serif;
+    font-size: 55px !important;
+  }
+  /* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+ position: relative;
+ z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: greenyellow;
+  box-shadow: 0 0 0 2px greenyellow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: greenyellow;
+  z-index: -1 !important;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+  stroke: black !important;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+/* herophoto */
+.herophoto{
+  object-fit: cover !important;
+}
+.ques{
+  color: gray;
+}
+/* recent works */
+.project{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.projectcontent{
+  position: absolute;
+  background-color: rgba(230, 230, 230, 0.1);
+  width: 100%;
+  height: 100%;
+  left: -500px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+}
+.project:hover .projectcontent{
+  left: 0;
+}
+.project img{
+  object-fit: cover;
+}
+.sectionmargin{
+  margin: 50px 0 !important;
+}
+/* footer */
+.footerli{
+  position: unset !important;
+  list-style: none !important;
+  color: white !important;
+  transition: 0.4s;
+}
+.footerli:hover{
+  color: yellowgreen !important;
+  transform: translateX(3%);
+}
+.footerul{
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+}
+input:focus{
+  outline: none !important;
+  border-color: inherit !important;
+}
+.socialicon{
+  transition: 0.4s;
+  color: white !important;
+}
+.socialicon:hover{
+ color: yellowgreen !important;
+}
