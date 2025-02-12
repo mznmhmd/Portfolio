@@ -34,6 +34,9 @@
         height: 100vh;
       }
     }
+    .test{
+      height: 100px;
+    }
     .playanimation{
       animation: navbaranimation 1 1s forwards ;
     }
